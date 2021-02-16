@@ -1,32 +1,47 @@
 package bot;
 
 import Commands.Command;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
+
+import java.awt.*;
 
 public class BotReplies {
 
-    public static String levelComplete(String id){
-        return "```css\n" + "Congratulations! \uD83C\uDF89 \n" + "Level " + id + " complete!\n" + "```";
+    public static MessageEmbed levelComplete(Game g){
+        return response("Congratulations \uD83C\uDF89","\n⭐ Level " + g.getLvID() + " complete in " + g.getMoves()+
+                " moves! ⭐", false).build();
     }
 
-    public static String activeGameWarn(){
-        return "```diff\n- You have an active game. Do $stop to play another level -\n```";
+    public static MessageEmbed activeGameWarn(){
+        return response("Error","❌ You have already have an active game!\n\n" +
+                "✅ Do **$stop** to play another level", true).build();
     }
 
-    public static String stopLevelMessage(String id, boolean active){
-        return active? "```diff\n- Level " + id + " stopped -\n```" : "```diff\n- You don't have an active game to stop! -\n```";
+    public static MessageEmbed stopLevelMessage(String id, boolean active){
+        return active?
+                response("Stop","✅ Level " + id + " stopped! ", false).build() :
+                response("Error","❌You don't have an active game to stop!", true).build() ;
     }
 
-    public static String resetLevelMessage(String id){
-        return "```fix\n - Resetting level "+ id + " -\n```";
+    public static MessageEmbed resetLevelMessage(String id){
+        return  response("Reset","✅ Resetting level " + id + " ! ", false).build();
     }
 
-    public static String incorrectUsage(Command cmd){
-        return "```diff\n" +
-                "- Incorrect usage!\n" +
-                "+ Correct usage -> " + cmd.getUsage() + "\n```";
+    public static MessageEmbed incorrectUsage(Command cmd){
+        return response("Error","❌ Incorrect usage!\n\n✅ Correct usage -> **" + cmd.getUsage()+"**", true).build() ;
     }
 
-    public static String notFound(){
-        return "```diff\n- No such command found -\n```";
+    public static MessageEmbed notFound(){
+        return response("Error","❌ No such command found!", true).build();
+    }
+
+    private static EmbedBuilder response(String title, String text, boolean isError){
+        EmbedBuilder msg = new EmbedBuilder();
+
+        msg.setTitle(title);
+        msg.setColor(isError ? Color.RED : Color.GREEN);
+        msg.setDescription(text);
+        return msg;
     }
 }

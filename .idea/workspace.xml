@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5112a0d3-bdbe-4b2f-8d32-d08304be2c2d" name="Default Changelist" comment="">
+    <list default="true" id="5112a0d3-bdbe-4b2f-8d32-d08304be2c2d" name="Default Changelist" comment="Bot replies update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/Help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/Play.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/ReactionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/ReactionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Reactions/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reactions/Exit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Reactions/Reset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reactions/Reset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/BotReplies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/BotReplies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Game.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,53 +24,53 @@
     <session id="733931095">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.44" value="1" />
-          <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.47" value="2" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.64" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="23" />
           <entry key="gitignore" value="17" />
-          <entry key="java" value="20627" />
+          <entry key="java" value="24420" />
           <entry key="json" value="2" />
           <entry key="text" value="22" />
-          <entry key="txt" value="294" />
+          <entry key="txt" value="322" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="20627" />
+          <entry key="JAVA" value="24420" />
           <entry key="JSON" value="2" />
-          <entry key="PLAIN_TEXT" value="356" />
+          <entry key="PLAIN_TEXT" value="384" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="2" />
-          <entry key="java" value="71" />
+          <entry key="gitignore" value="3" />
+          <entry key="java" value="101" />
           <entry key="json" value="1" />
           <entry key="text" value="1" />
-          <entry key="txt" value="8" />
+          <entry key="txt" value="10" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="71" />
+          <entry key="JAVA" value="101" />
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="PLAIN_TEXT" value="14" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -71,104 +79,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Help.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Play.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Stop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="23" column="70" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/levels.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="112" column="12" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bot/GameManagement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bot/BotReplies.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
-              <folding>
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#987#988#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="21" />
-              <folding>
-                <element signature="e#590#591#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Reactions/Reset.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+            <state relative-caret-position="327">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,11 +93,101 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Reactions/Exit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state relative-caret-position="204">
+              <caret line="20" column="105" selection-start-line="19" selection-start-column="8" selection-end-line="20" selection-end-column="105" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bot/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="46" column="15" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#941#942#0" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
+                <element signature="e#892#893#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
+                <element signature="e#962#963#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#908#909#0" expanded="true" />
+                <element signature="e#944#945#0" expanded="true" />
+                <element signature="e#1360#1361#0" expanded="true" />
+                <element signature="e#1388#1389#0" expanded="true" />
+                <element signature="method#handleDown#0;class#Game#0" />
+                <element signature="method#handleLeft#0;class#Game#0" />
+                <element signature="method#handleRight#0;class#Game#0" />
+                <element signature="method#drawTile#0;class#Game#0" />
+                <element signature="method#drawBoxTargets#0;class#Game#0" />
+                <element signature="method#drawBoard#0;class#Game#0" />
+                <element signature="method#isBoxPos#0;class#Game#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/ReactionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bot/BotReplies.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1160#1161#0" expanded="true" />
+                <element signature="e#1233#1234#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Help.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="25" column="47" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/levels.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="113" column="2" lean-forward="true" selection-start-line="113" selection-start-column="2" selection-end-line="113" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -224,25 +228,30 @@
         <option value="$PROJECT_DIR$/src/main/java/CommandManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands.java" />
         <option value="$PROJECT_DIR$/src/main/java/CommandHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Reactions/Reaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/ReactionHandler.java" />
         <option value="$PROJECT_DIR$/src/Token.txt" />
         <option value="$PROJECT_DIR$/src/config.json" />
         <option value="$PROJECT_DIR$/src/main/Token.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/bot/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/main.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Level.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/GameManagement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Reactions/Reset.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Reactions/Exit.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/Play.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Commands/Stop.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bot/BotReplies.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/Help.java" />
         <option value="$PROJECT_DIR$/src/levels.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/Reactions/Undo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/BoardState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/Move.java" />
+        <option value="$PROJECT_DIR$/src/states.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/Play.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Reactions/Reaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/Help.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Reactions/Exit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Reactions/Reset.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Handlers/ReactionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/BotReplies.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/Game.java" />
       </list>
     </option>
   </component>
@@ -265,6 +274,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,16 +324,23 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Handlers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SokobanDiscordBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SokobanDiscord" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Reactions" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1613437739163" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1613506676831" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -372,13 +389,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613437640833</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Bot replies update">
+      <created>1613437753383</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613437753383</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17246597" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17473525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -387,13 +412,13 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.018032787" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.3852459" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" weight="0.18852459" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Flutter Performance" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32786885" />
@@ -455,17 +480,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/PlayCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/CommandHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Reactions/Reaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
-          <folding>
-            <element signature="e#120#121#0" expanded="true" />
-            <element signature="e#151#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Reaction.java" />
     <entry file="file://$PROJECT_DIR$/src/config.json" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -482,105 +496,13 @@
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Token.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="242" column="4" selection-start-line="242" selection-start-column="4" selection-end-line="242" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#handleUP#0;class#Game#0" />
-            <element signature="method#handleDown#0;class#Game#0" />
-            <element signature="e#6730#6731#0" expanded="true" />
-            <element signature="e#6757#6758#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/ReactionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Reactions/Reset.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Reactions/Exit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Play.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Stop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="23" column="70" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -594,23 +516,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/BotReplies.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/BoardState.java" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Move.java" />
+    <entry file="file://$PROJECT_DIR$/src/states.txt" />
+    <entry file="file://$PROJECT_DIR$/src/levels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="113" column="2" lean-forward="true" selection-start-line="113" selection-start-column="2" selection-end-line="113" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="21" />
           <folding>
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Stop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="70" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reactions/Reaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reactions/Undo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Play.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="17" column="68" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/ReactionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Help.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+        <state relative-caret-position="310">
+          <caret line="25" column="47" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -619,18 +613,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="163">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/levels.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="112" column="12" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
+        <state relative-caret-position="208">
+          <caret line="46" column="15" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#1360#1361#0" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="true" />
+            <element signature="method#handleDown#0;class#Game#0" />
+            <element signature="method#handleLeft#0;class#Game#0" />
+            <element signature="method#handleRight#0;class#Game#0" />
+            <element signature="method#drawTile#0;class#Game#0" />
+            <element signature="method#drawBoxTargets#0;class#Game#0" />
+            <element signature="method#drawBoard#0;class#Game#0" />
+            <element signature="method#isBoxPos#0;class#Game#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reactions/Exit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="105" selection-start-line="19" selection-start-column="8" selection-end-line="20" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reactions/Reset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/BotReplies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1233#1234#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

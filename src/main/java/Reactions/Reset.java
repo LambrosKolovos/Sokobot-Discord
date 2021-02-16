@@ -19,7 +19,7 @@ public class Reset extends Reaction{
         if(GameManagement.hasGame(user.getIdLong())){
             currentGame.reset();
             event.getChannel().sendMessage(BotReplies.resetLevelMessage(currentGame.getLvID())).queue();
-            event.getChannel().sendMessage(currentGame.gameMessage(user).build()).queue(
+            event.getChannel().editMessageById(currentGame.getGameMessageID(), currentGame.gameMessage(user).build()).queue(
                     msg -> {
                         msg.addReaction("U+2b05").queue();
                         msg.addReaction("U+1f504").queue();
@@ -27,5 +27,6 @@ public class Reset extends Reaction{
                     }
             );
         }
+
     }
 }

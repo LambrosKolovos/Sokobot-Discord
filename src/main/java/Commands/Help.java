@@ -2,10 +2,10 @@ package Commands;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
-import net.dv8tion.jda.api.entities.Member;
-import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
-import net.dv8tion.jda.internal.entities.UserById;
+
+import java.awt.*;
+
 
 public class Help extends Command{
 
@@ -19,11 +19,11 @@ public class Help extends Command{
     }
 
     private EmbedBuilder helpMessage(Guild g){
-        Member dev = g.getMemberById(279739792319840257L);
         EmbedBuilder message = new EmbedBuilder();
         message.setTitle("Help ");
         message.setThumbnail(g.getSelfMember().getUser().getAvatarUrl());
         message.setDescription("This is a discord bot for the classic game of Sokoban!");
+        message.setColor(new Color(02,212,56));
         message.addField("__How to play__", "Type **$play id** ." +
                 "\nCurrently there are 10 levels availabe." +
                 "\n``WASD``: Use W A S D to move while in game" , false);
@@ -36,9 +36,10 @@ public class Help extends Command{
                 "``$play id``: Begins a game for the selected level"+"" +
                         "\n``$stop``: Stops current game and allows user to select a new level"+
                         "\n``$help``: Displays help message",false);
+        message.addField("__Developed__", "One day I was bored. So I made this." +"\n" +
+                "\uD83D\uDCBB  [Source code](https://github.com/LambrosKolovos/Sokobot-Discord)", false);
         message.addBlankField(false);
-        message.addField("__Developed__", "One day @Lambros was bored. So he made this." +"\n" +
-                "\uD83D\uDCBB https://github.com/LambrosKolovos/Sokobot-Discord", false);
+        message.setFooter("Created by Lambros", "https://i.ibb.co/82fNczJ/avatar.png");
 
         return message;
     }

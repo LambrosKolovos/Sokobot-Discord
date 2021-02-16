@@ -3,6 +3,10 @@ package bot;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.User;
 
+import java.awt.*;
+import java.util.ArrayList;
+
+
 public class Game {
 
     private char[][] boardState;
@@ -10,23 +14,50 @@ public class Game {
     private String boardMessage;
     private int boxes;
     private int boxOnTarget;
-    private boolean isOver;
     private int playerX;
     private int playerY;
+    private int moves;
     private String lvID;
     private Level lv;
+    private Long gameMessageID;
+    private Long userInputID;
+    private User player;
 
-    public Game(String id){
+    public Game(User player, String id){
         lv = new Level(Integer.parseInt(id));
         lvID = id;
         boxPositions= new int[lv.getLevelBoxes()][2];
         boxes = lv.getLevelBoxes();
         boxOnTarget = 0;
         boardState = new char[lv.getLevelHeight()][lv.getLevelWidth()];
-
         fillBoardState(lv);
         drawBoard();
-        isOver = false;
+        this.player = player;
+        moves = 0;
+    }
+
+    public User getPlayer() {
+        return player;
+    }
+
+    public void setUserInputID(Long userInputID) {
+        this.userInputID = userInputID;
+    }
+
+    public Long getUserInputID() {
+        return userInputID;
+    }
+
+    public void setGameMessageID(Long gameMessageID) {
+        this.gameMessageID = gameMessageID;
+    }
+
+    public Long getGameMessageID() {
+        return gameMessageID;
+    }
+
+    public int getMoves() {
+        return moves;
     }
 
     private void fillBoardState(Level board){
@@ -50,6 +81,7 @@ public class Game {
     }
 
     public void reset(){
+        moves = 0;
         fillBoardState(lv);
         drawBoard();
     }
@@ -68,6 +100,7 @@ public class Game {
             handleLeft();
         }
 
+        moves++;
         drawBoxTargets();
         drawBoard();
     }
@@ -259,8 +292,9 @@ public class Game {
 
         message.setTitle("Sokoban | Level " + lvID);
         message.setDescription(boardMessage);
-        message.addBlankField(false);
-        message.addField("Player", user.getAsMention(), false);
+        message.setColor(new Color(02,212,56));
+        message.addField("Moves - " + moves," ",false);
+        message.addField("Player", user.getAsMention(), true);
         message.addField("Movement", "__Use W A S D to move__", false);
         return message;
     }

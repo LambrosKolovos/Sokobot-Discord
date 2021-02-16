@@ -1,6 +1,7 @@
 package Handlers;
 
 import bot.BotReplies;
+import bot.Game;
 import bot.GameManagement;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -69,16 +70,21 @@ public class CommandHandler extends ListenerAdapter {
 
     private void processDirection(GuildMessageReceivedEvent event){
         if(GameManagement.hasGame(user.getIdLong())) {
-            GameManagement.getGame(user.getIdLong()).move(message);
-            event.getChannel().sendMessage(GameManagement.getGame(user.getIdLong()).gameMessage(user).build()).queue(
+            Game currentGame = GameManagement.getGame(user.getIdLong());
+            currentGame.move(message);
+            currentGame.setUserInputID(event.getMessageIdLong());
+            event.getChannel().editMessageById(currentGame.getGameMessageID(), GameManagement.getGame(user.getIdLong()).gameMessage(user).build()).queue(
                     msg -> {
                         msg.addReaction("U+2b05").queue();
                         msg.addReaction("U+1f504").queue();
                         msg.addReaction("U+274c").queue();
                     }
             );
+            event.getChannel().deleteMessageById(currentGame.getUserInputID()).queue();
+
+
             if(GameManagement.getGame(user.getIdLong()).isOver()){
-                event.getChannel().sendMessage(BotReplies.levelComplete(GameManagement.getGame(user.getIdLong()).getLvID())).queue();
+                event.getChannel().sendMessage(BotReplies.levelComplete(GameManagement.getGame(user.getIdLong()))).queue();
                 GameManagement.removeGame(user.getIdLong());
             }
         }
