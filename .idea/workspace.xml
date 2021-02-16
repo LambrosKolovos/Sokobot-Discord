@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5112a0d3-bdbe-4b2f-8d32-d08304be2c2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/bot/BotReplies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/Help.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/Play.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/Stop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/Stop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Reactions/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reactions/Exit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Reactions/Reset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reactions/Reset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bot/GameManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/GameManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,7 +36,7 @@
           <entry key="java" value="20627" />
           <entry key="json" value="2" />
           <entry key="text" value="22" />
-          <entry key="txt" value="265" />
+          <entry key="txt" value="294" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
@@ -56,7 +44,7 @@
         <counts>
           <entry key="JAVA" value="20627" />
           <entry key="JSON" value="2" />
-          <entry key="PLAIN_TEXT" value="327" />
+          <entry key="PLAIN_TEXT" value="356" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -335,7 +323,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1613437589485" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1613437739163" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -377,6 +365,14 @@
       <option name="presentableId" value="Default" />
       <updated>1613061687563</updated>
     </task>
+    <task id="LOCAL-00001" summary="Bot replies update">
+      <created>1613437640833</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613437640833</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -451,6 +447,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Bot replies update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bot replies update" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/PlayCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/CommandHandler.java" />
@@ -459,6 +459,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+          <folding>
+            <element signature="e#120#121#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -492,6 +496,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="242" column="4" selection-start-line="242" selection-start-column="4" selection-end-line="242" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#handleUP#0;class#Game#0" />
+            <element signature="method#handleDown#0;class#Game#0" />
+            <element signature="e#6730#6731#0" expanded="true" />
+            <element signature="e#6757#6758#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
