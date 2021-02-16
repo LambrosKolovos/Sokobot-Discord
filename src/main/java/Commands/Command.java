@@ -6,10 +6,12 @@ public abstract class Command {
 
     private final String name;
     private final int args;
+    private final String usage;
 
-    public Command(String name, int args) {
+    public Command(String name, int args, String usage) {
         this.name = name;
         this.args = args;
+        this.usage = usage;
     }
 
     public abstract void execute(GuildMessageReceivedEvent event, String args[]);
@@ -20,5 +22,9 @@ public abstract class Command {
 
     public int getArgs() {
         return args;
+    }
+
+    public String getUsage() {
+        return usage;
     }
 }

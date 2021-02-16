@@ -237,6 +237,10 @@ public class Game {
         return false;
     }
 
+    public String getLvID() {
+        return lvID;
+    }
+
     public boolean isOver(){
         boxOnTarget = 0;
         for(int i=0; i<boardState.length; i++) {

@@ -1,5 +1,6 @@
 package Handlers;
 
+import bot.BotReplies;
 import bot.GameManagement;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -77,7 +78,7 @@ public class CommandHandler extends ListenerAdapter {
                     }
             );
             if(GameManagement.getGame(user.getIdLong()).isOver()){
-                event.getChannel().sendMessage("```Congratulations! \uD83C\uDF89 \nbot.Level complete!```").queue();
+                event.getChannel().sendMessage(BotReplies.levelComplete(GameManagement.getGame(user.getIdLong()).getLvID())).queue();
                 GameManagement.removeGame(user.getIdLong());
             }
         }
@@ -86,8 +87,8 @@ public class CommandHandler extends ListenerAdapter {
 
         Command currentCommand = commands.get(name);
 
-        if (currentCommand == null) {
-            event.getChannel().sendMessage("No such command found!").queue();
+        if(message.startsWith(prefix) && currentCommand == null){
+            event.getChannel().sendMessage(BotReplies.notFound()).queue();
             return;
         }
 
@@ -97,7 +98,7 @@ public class CommandHandler extends ListenerAdapter {
         }
 
         if(currentCommand.getArgs() != args.length){
-            event.getChannel().sendMessage("Incorrect usage!").queue();
+            event.getChannel().sendMessage(BotReplies.incorrectUsage(currentCommand)).queue();
             return;
         }
 

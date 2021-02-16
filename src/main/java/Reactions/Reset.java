@@ -1,5 +1,6 @@
 package Reactions;
 
+import bot.BotReplies;
 import bot.Game;
 import bot.GameManagement;
 import net.dv8tion.jda.api.entities.User;
@@ -17,7 +18,7 @@ public class Reset extends Reaction{
 
         if(GameManagement.hasGame(user.getIdLong())){
             currentGame.reset();
-            event.getChannel().sendMessage("```Resseting level...```").queue();
+            event.getChannel().sendMessage(BotReplies.resetLevelMessage(currentGame.getLvID())).queue();
             event.getChannel().sendMessage(currentGame.gameMessage(user).build()).queue(
                     msg -> {
                         msg.addReaction("U+2b05").queue();
@@ -25,9 +26,6 @@ public class Reset extends Reaction{
                         msg.addReaction("U+274c").queue();
                     }
             );
-        }
-        else{
-            event.getChannel().sendMessage("```You are not allowed to do this!```").queue();
         }
     }
 }

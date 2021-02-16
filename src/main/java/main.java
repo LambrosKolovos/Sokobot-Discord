@@ -13,7 +13,7 @@ public class main {
     public static void main(String[] args) throws LoginException, IOException {
         JDABuilder
                 .createDefault(token())
-                .setActivity(Activity.playing("!play to start"))
+                .setActivity(Activity.playing("$play to start"))
                 .addEventListeners(new CommandHandler())
                 .addEventListeners(new ReactionHandler())
                 .build();
@@ -27,8 +27,6 @@ public class main {
         BufferedReader br = new BufferedReader(fr);
 
         String tokenStr = br.readLine();
-        System.out.println("Read: " + tokenStr);
-
         return tokenStr;
     }
 }

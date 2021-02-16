@@ -1,5 +1,6 @@
 package Commands;
 
+import bot.BotReplies;
 import bot.Game;
 import bot.GameManagement;
 import net.dv8tion.jda.api.entities.User;
@@ -7,7 +8,7 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 public class Play extends Command {
 
     public Play(){
-        super("play", 1);
+        super("play", 1, "$play id");
     }
 
     @Override
@@ -15,8 +16,7 @@ public class Play extends Command {
         User user = event.getAuthor();
 
         if(GameManagement.hasGame(user.getIdLong())){
-            event.getChannel().sendMessage(
-                    "```You already have an active game!" +"\nPlease use !stop to end current game.```").queue();
+            event.getChannel().sendMessage(BotReplies.activeGameWarn()).queue();
             return;
         }
         else{

@@ -6,7 +6,6 @@ public  class GameManagement {
 
     private static final HashMap<Long, Game> activeGames = new HashMap<>();
 
-
     public static void addGame(Long userID, Game g){
         activeGames.put(userID, g);
     }
