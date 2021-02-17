@@ -3,6 +3,7 @@ package Handlers;
 import Reactions.Exit;
 import  Reactions.Reaction;
 import Reactions.Reset;
+import Reactions.Undo;
 import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -16,6 +17,7 @@ public class ReactionHandler extends ListenerAdapter {
     public ReactionHandler(){
         reactions = new HashMap<>();
         loadReactions();
+
     }
 
 
@@ -23,6 +25,7 @@ public class ReactionHandler extends ListenerAdapter {
         Reaction[] reactArr = {
                 new Reset(),
                 new Exit(),
+                new Undo()
         };
 
         for (Reaction react : reactArr) {

@@ -1,6 +1,7 @@
 package bot;
 
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
 
 import java.awt.*;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 
 public class Game {
 
+    private ArrayList<String> boardHistory;
     private char[][] boardState;
     private int[][] boxPositions;
     private String boardMessage;
@@ -22,6 +24,7 @@ public class Game {
     private Long gameMessageID;
     private Long userInputID;
     private User player;
+    private ArrayList<Message> usermsg;
 
     public Game(User player, String id){
         lv = new Level(Integer.parseInt(id));
@@ -30,10 +33,63 @@ public class Game {
         boxes = lv.getLevelBoxes();
         boxOnTarget = 0;
         boardState = new char[lv.getLevelHeight()][lv.getLevelWidth()];
+        boardHistory = new ArrayList<>();
         fillBoardState(lv);
         drawBoard();
         this.player = player;
         moves = 0;
+        usermsg = new ArrayList<>();
+    }
+
+    private void convertToCharArr(int index){
+        int rIndex = 0;
+        int colIndex = 0;
+        for(int i=0; i<boardHistory.get(index).length(); i++){
+            if(boardHistory.get(index).charAt(i) == '\n'){
+                colIndex = 0;
+                rIndex++;
+            }
+            else if(boardHistory.get(index).charAt(i) == '@'){
+                boardState[rIndex][colIndex] = '@';
+                colIndex++;
+            }
+            else if(boardHistory.get(index).charAt(i) == '$'){
+                boardState[rIndex][colIndex] = '$';
+                colIndex++;
+            }
+            else if(boardHistory.get(index).charAt(i) == '.'){
+                boardState[rIndex][colIndex] = '.';
+                colIndex++;
+            }
+            else if(boardHistory.get(index).charAt(i) == '#'){
+                boardState[rIndex][colIndex] = '#';
+                colIndex++;
+            }
+            else if(boardHistory.get(index).charAt(i) == '^'){
+                boardState[rIndex][colIndex] = '^';
+                colIndex++;
+            }
+        }
+
+    }
+    private void addStateToHistory(){
+        String state = "";
+        for(int i=0; i<boardState.length; i++) {
+            for (int j=0; j<boardState[i].length; j++) {
+              state += boardState[i][j];
+            }
+            state += "\n";
+        }
+
+        boardHistory.add(state);
+        System.out.println(state);
+    }
+    public ArrayList<Message> getUsermsg() {
+        return usermsg;
+    }
+
+    public boolean deleteMsg(){
+        return usermsg.size() == 7;
     }
 
     public User getPlayer() {
@@ -86,7 +142,7 @@ public class Game {
         drawBoard();
     }
 
-    public void move(String dir){
+    public void move(String dir, Message msg){
         if(dir.equalsIgnoreCase("w")){
             handleUP();
         }
@@ -100,12 +156,28 @@ public class Game {
             handleLeft();
         }
 
+        if(usermsg.size() == 7)
+            usermsg.clear();
+
+
+        addStateToHistory();
+        usermsg.add(msg);
         moves++;
-        drawBoxTargets();
         drawBoard();
     }
 
     public void undoMove(){
+        if(boardHistory.size() == 0)
+            return;
+
+        if(boardHistory.size() - 1 == 0)
+            fillBoardState(lv);
+        else {
+            boardHistory.remove(boardHistory.size()-1);
+            convertToCharArr(boardHistory.size() - 1);
+        }
+
+        drawBoard();
     }
 
     private void handleUP(){
@@ -220,6 +292,16 @@ public class Game {
         }
     }
 
+    private void getPlayerPos(){
+        for(int i=0; i<boardState.length; i++) {
+            for (int j=0; j<boardState[i].length; j++) {
+               if(boardState[i][j] == '@'){
+                   playerX = i;
+                   playerY = j;
+               }
+            }
+        }
+    }
     private String drawTile(char c){
         String modified = "";
             switch(c){
@@ -252,6 +334,8 @@ public class Game {
     }
 
     private void drawBoard(){
+        getPlayerPos();
+        drawBoxTargets();
         boardMessage = "";
         for(int i=0; i<boardState.length; i++) {
             for (int j=0; j<boardState[i].length; j++) {
