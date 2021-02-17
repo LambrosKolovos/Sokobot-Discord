@@ -14,18 +14,23 @@ public class Play extends Command {
     @Override
     public void execute(GuildMessageReceivedEvent event, String[] args) {
         User user = event.getAuthor();
-
         if(GameManagement.hasGame(user.getIdLong())){
             event.getChannel().sendMessage(BotReplies.activeGameWarn()).queue();
             return;
         }
         else{
-            GameManagement.addGame(user.getIdLong(), new Game(args[0]));
-            event.getChannel().sendMessage(GameManagement.getGame(user.getIdLong()).gameMessage(user).build()).queue(
+            Game game = new Game(user,args[0]);
+            GameManagement.addGame(user.getIdLong(), game);
+            Game currentGame = GameManagement.getGame(user.getIdLong());
+            event.getChannel().sendMessage(currentGame.gameMessage(user).build()).queue(
                     msg -> {
+                        game.setGameMessageID(msg.getIdLong());
                         msg.addReaction("U+2b05").queue();
+                        msg.addReaction("U+2B06").queue();
+                        msg.addReaction("U+2B07").queue();
+                        msg.addReaction("U+27A1").queue();
+                        msg.addReaction("U+21A9").queue();
                         msg.addReaction("U+1f504").queue();
-                        msg.addReaction("U+274c").queue();
                     });
         }
     }

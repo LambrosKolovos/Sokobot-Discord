@@ -1,7 +1,6 @@
 package bot;
 
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
 
 import java.awt.*;
@@ -22,9 +21,6 @@ public class Game {
     private String lvID;
     private Level lv;
     private Long gameMessageID;
-    private Long userInputID;
-    private User player;
-    private ArrayList<Message> usermsg;
 
     public Game(User player, String id){
         lv = new Level(Integer.parseInt(id));
@@ -36,9 +32,7 @@ public class Game {
         boardHistory = new ArrayList<>();
         fillBoardState(lv);
         drawBoard();
-        this.player = player;
         moves = 0;
-        usermsg = new ArrayList<>();
     }
 
     private void convertToCharArr(int index){
@@ -82,26 +76,6 @@ public class Game {
         }
 
         boardHistory.add(state);
-        System.out.println(state);
-    }
-    public ArrayList<Message> getUsermsg() {
-        return usermsg;
-    }
-
-    public boolean deleteMsg(){
-        return usermsg.size() == 7;
-    }
-
-    public User getPlayer() {
-        return player;
-    }
-
-    public void setUserInputID(Long userInputID) {
-        this.userInputID = userInputID;
-    }
-
-    public Long getUserInputID() {
-        return userInputID;
     }
 
     public void setGameMessageID(Long gameMessageID) {
@@ -142,7 +116,7 @@ public class Game {
         drawBoard();
     }
 
-    public void move(String dir, Message msg){
+    public void move(String dir){
         if(dir.equalsIgnoreCase("w")){
             handleUP();
         }
@@ -156,12 +130,7 @@ public class Game {
             handleLeft();
         }
 
-        if(usermsg.size() == 7)
-            usermsg.clear();
-
-
         addStateToHistory();
-        usermsg.add(msg);
         moves++;
         drawBoard();
     }
@@ -379,7 +348,15 @@ public class Game {
         message.setColor(new Color(02,212,56));
         message.addField("Moves - " + moves," ",false);
         message.addField("Player", user.getAsMention(), true);
-        message.addField("Movement", "__Use W A S D to move__", false);
+        return message;
+    }
+
+    public EmbedBuilder gameExtras(){
+        EmbedBuilder message = new EmbedBuilder();
+
+        message.setTitle("Extras");
+        message.setDescription("UNDO - RESET - STOP");
+        message.setColor(new Color(02,212,56));
         return message;
     }
 }

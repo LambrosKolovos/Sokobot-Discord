@@ -1,10 +1,11 @@
 package Handlers;
 
-import Reactions.Exit;
-import  Reactions.Reaction;
-import Reactions.Reset;
-import Reactions.Undo;
+import Reactions.*;
+import bot.Game;
+import bot.GameManagement;
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionAddEvent;
+import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import javax.annotation.Nonnull;
@@ -23,9 +24,12 @@ public class ReactionHandler extends ListenerAdapter {
 
     private void loadReactions(){
         Reaction[] reactArr = {
+                new UpReact(),
+                new DownReact(),
+                new LeftReact(),
+                new RightReact(),
+                new Undo(),
                 new Reset(),
-                new Exit(),
-                new Undo()
         };
 
         for (Reaction react : reactArr) {
@@ -37,7 +41,6 @@ public class ReactionHandler extends ListenerAdapter {
     @Override
     public void onGuildMessageReactionAdd(@Nonnull GuildMessageReactionAddEvent event) {
         String reactCode = event.getReactionEmote().getAsCodepoints();
-
         Reaction currentReact = reactions.get(reactCode);
 
         if(event.getUser().isBot())
@@ -46,6 +49,17 @@ public class ReactionHandler extends ListenerAdapter {
         if(currentReact == null)
             return;
 
-        currentReact.execute(event);
+        if(GameManagement.hasGame(event.getUserIdLong())){
+
+            Game currentGame = GameManagement.getGame(event.getUserIdLong());
+            User user = event.getUser();
+
+            if(event.getReaction().getMessageIdLong() == currentGame.getGameMessageID()){
+                //User reacted to correct game - proceed
+                currentReact.execute(event, currentGame, user);
+            }
+        }
+
     }
+
 }

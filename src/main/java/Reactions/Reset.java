@@ -12,19 +12,13 @@ public class Reset extends Reaction{
         super("U+1f504");
     }
     @Override
-    public void execute(GuildMessageReactionAddEvent event) {
-        User user = event.getUser();
-        Game currentGame =  GameManagement.getGame(user.getIdLong());
+    public void execute(GuildMessageReactionAddEvent event,  Game currentGame, User user) {
 
         if(GameManagement.hasGame(user.getIdLong())){
             currentGame.reset();
             event.getChannel().sendMessage(BotReplies.resetLevelMessage(currentGame.getLvID())).queue();
             event.getChannel().editMessageById(currentGame.getGameMessageID(), currentGame.gameMessage(user).build()).queue(
-                    msg -> {
-                        msg.addReaction("U+2b05").queue();
-                        msg.addReaction("U+1f504").queue();
-                        msg.addReaction("U+274c").queue();
-                    }
+
             );
         }
 
