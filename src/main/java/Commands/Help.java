@@ -26,16 +26,16 @@ public class Help extends Command{
         message.setColor(new Color(02,212,56));
         message.addField("__How to play__", "Type **$play id** ." +
                 "\nCurrently there are 10 levels availabe." +
-                "\n``WASD``: Use W A S D to move while in game" , false);
+                "`Arrows` - Moves your character.\n", false);
         message.addField("__Goal__","Place every box - \u23F9 on top of a box target - ❎ to win!", false);
         message.addField("__Reactions__",
-                "⬅ - Undo your last move" +
-                        "\n\uD83D\uDD04 - Resets the level" +
-                        "\n❌ - Stops current level.",false);
+                "↩️- Undo your last move" +
+                        "\n\uD83D\uDD04 - Resets the level.",false);
         message.addField("__Commands__",
-                "``$play id``: Begins a game for the selected level"+"" +
-                        "\n``$stop``: Stops current game and allows user to select a new level"+
-                        "\n``$help``: Displays help message",false);
+                "``$play id``: Begins a game for the selected level."+"" +
+                        "\n``$stop``: Stops current game and allows user to select a new level."+
+                        "\n``$help``: Displays help message." +
+                        "\n`$stats`: Shows bot stats.",false);
         message.addField("__Developed__", "One day I was bored. So I made this." +"\n" +
                 "\uD83D\uDCBB  [Source code](https://github.com/LambrosKolovos/Sokobot-Discord)", false);
         message.addBlankField(false);
