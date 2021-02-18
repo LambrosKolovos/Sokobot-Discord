@@ -4,6 +4,7 @@ import Reactions.*;
 import bot.Game;
 import bot.GameManagement;
 import net.dv8tion.jda.api.entities.User;
+import net.dv8tion.jda.api.events.message.guild.react.GenericGuildMessageReactionEvent;
 import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionAddEvent;
 import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -18,9 +19,7 @@ public class ReactionHandler extends ListenerAdapter {
     public ReactionHandler(){
         reactions = new HashMap<>();
         loadReactions();
-
     }
-
 
     private void loadReactions(){
         Reaction[] reactArr = {
@@ -39,7 +38,7 @@ public class ReactionHandler extends ListenerAdapter {
     }
 
     @Override
-    public void onGuildMessageReactionAdd(@Nonnull GuildMessageReactionAddEvent event) {
+    public void onGenericGuildMessageReaction(@Nonnull GenericGuildMessageReactionEvent event) {
         String reactCode = event.getReactionEmote().getAsCodepoints();
         Reaction currentReact = reactions.get(reactCode);
 
@@ -48,7 +47,6 @@ public class ReactionHandler extends ListenerAdapter {
 
         if(currentReact == null)
             return;
-
         if(GameManagement.hasGame(event.getUserIdLong())){
 
             Game currentGame = GameManagement.getGame(event.getUserIdLong());
@@ -59,7 +57,6 @@ public class ReactionHandler extends ListenerAdapter {
                 currentReact.execute(event, currentGame, user);
             }
         }
-
     }
 
 }

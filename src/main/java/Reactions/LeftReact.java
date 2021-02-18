@@ -4,8 +4,7 @@ import bot.BotReplies;
 import bot.Game;
 import bot.GameManagement;
 import net.dv8tion.jda.api.entities.User;
-import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionAddEvent;
-import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionRemoveEvent;
+import net.dv8tion.jda.api.events.message.guild.react.GenericGuildMessageReactionEvent;
 
 public class LeftReact extends Reaction {
 
@@ -14,15 +13,15 @@ public class LeftReact extends Reaction {
     }
 
     @Override
-    public void execute(GuildMessageReactionAddEvent event, Game currentGame, User user) {
+    public void execute(GenericGuildMessageReactionEvent event, Game currentGame, User user) {
         currentGame.move("a");
-        event.getChannel().editMessageById(currentGame.getGameMessageID(), GameManagement.getGame(user.getIdLong()).gameMessage(user).build()).queue(
-                msg -> msg.removeReaction(super.getCode(), user).queue()
-        );
+        event.getChannel().editMessageById(currentGame.getGameMessageID(), GameManagement.getGame(user.getIdLong()).gameMessage(user).build()).queue();
 
         if(GameManagement.getGame(user.getIdLong()).isOver()){
             event.getChannel().sendMessage(BotReplies.levelComplete(GameManagement.getGame(user.getIdLong()))).queue();
             GameManagement.removeGame(user.getIdLong());
         }
     }
+
+
 }

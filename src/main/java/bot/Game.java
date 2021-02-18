@@ -11,6 +11,8 @@ public class Game {
 
     private ArrayList<String> boardHistory;
     private char[][] boardState;
+    private boolean stateChanged;
+
     private int[][] boxPositions;
     private String boardMessage;
     private int boxes;
@@ -111,12 +113,14 @@ public class Game {
     }
 
     public void reset(){
+        boardHistory.clear();
         moves = 0;
         fillBoardState(lv);
         drawBoard();
     }
 
     public void move(String dir){
+        stateChanged = false;
         if(dir.equalsIgnoreCase("w")){
             handleUP();
         }
@@ -130,20 +134,25 @@ public class Game {
             handleLeft();
         }
 
-        addStateToHistory();
-        moves++;
-        drawBoard();
+        if(stateChanged){
+            addStateToHistory();
+            moves++;
+            drawBoard();
+        }
     }
 
     public void undoMove(){
         if(boardHistory.size() == 0)
             return;
 
-        if(boardHistory.size() - 1 == 0)
+        if(boardHistory.size() - 1 == 0){
             fillBoardState(lv);
+            moves = 0;
+        }
         else {
             boardHistory.remove(boardHistory.size()-1);
             convertToCharArr(boardHistory.size() - 1);
+            moves--;
         }
 
         drawBoard();
@@ -166,6 +175,7 @@ public class Game {
                 boardState[playerX-2][playerY] = '$';
 
                 playerX = playerX-1;
+                stateChanged = true;
             }
         }
         else{
@@ -174,6 +184,7 @@ public class Game {
             boardState[playerX-1][playerY] = '@';
 
             playerX = playerX-1;
+            stateChanged = true;
         }
     }
 
@@ -194,6 +205,7 @@ public class Game {
                 boardState[playerX+2][playerY] = '$';
 
                 playerX = playerX+1;
+                stateChanged = true;
             }
         }
         else{
@@ -202,6 +214,7 @@ public class Game {
             boardState[playerX+1][playerY] = '@';
 
             playerX = playerX+1;
+            stateChanged = true;
         }
     }
 
@@ -222,6 +235,7 @@ public class Game {
                 boardState[playerX][playerY-2] = '$';
 
                 playerY = playerY-1;
+                stateChanged = true;
             }
         }
         else{
@@ -230,6 +244,7 @@ public class Game {
             boardState[playerX][playerY-1] = '@';
 
             playerY = playerY-1;
+            stateChanged = true;
         }
     }
 
@@ -250,6 +265,7 @@ public class Game {
                 boardState[playerX][playerY+2] = '$';
 
                 playerY = playerY+1;
+                stateChanged = true;
             }
         }
         else{
@@ -258,6 +274,7 @@ public class Game {
             boardState[playerX][playerY+1] = '@';
 
             playerY = playerY+1;
+            stateChanged = true;
         }
     }
 
@@ -345,18 +362,10 @@ public class Game {
 
         message.setTitle("Sokoban | Level " + lvID);
         message.setDescription(boardMessage);
-        message.setColor(new Color(02,212,56));
+        message.setColor(new Color(253,203,88));
         message.addField("Moves - " + moves," ",false);
         message.addField("Player", user.getAsMention(), true);
         return message;
     }
 
-    public EmbedBuilder gameExtras(){
-        EmbedBuilder message = new EmbedBuilder();
-
-        message.setTitle("Extras");
-        message.setDescription("UNDO - RESET - STOP");
-        message.setColor(new Color(02,212,56));
-        return message;
-    }
 }

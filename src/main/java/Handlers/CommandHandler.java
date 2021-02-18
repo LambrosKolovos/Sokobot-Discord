@@ -1,6 +1,7 @@
 package Handlers;
 
 import bot.BotReplies;
+import net.dv8tion.jda.api.entities.RichPresence;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -27,6 +28,7 @@ public class CommandHandler extends ListenerAdapter {
         Command[] cmdArr = {
                 new Play(),
                 new Stop(),
+                new Stats(),
                 new Help(),
         };
 
@@ -39,19 +41,19 @@ public class CommandHandler extends ListenerAdapter {
     @Override
     public void onGuildMessageReceived(@Nonnull GuildMessageReceivedEvent event) {
         if(!event.getAuthor().isBot()) {
-
-            user = event.getAuthor();
             message = event.getMessage().getContentRaw().toLowerCase();
-
-            String input[] = message.split(" ");
-            String[] args = Arrays.copyOfRange(input, 1, input.length);
-            String name = input[0].substring(1);
-            processCommand(event, name, args);
+            if (message.startsWith(prefix)) {
+                user = event.getAuthor();
+                String input[] = message.split(" ");
+                String[] args = Arrays.copyOfRange(input, 1, input.length);
+                processCommand(event, input, args);
+            }
         }
     }
 
-    private void processCommand(GuildMessageReceivedEvent event, String name, String[] args){
+    private void processCommand(GuildMessageReceivedEvent event,String[] input, String[] args){
 
+        String name = input[0].substring(1);
         Command currentCommand = commands.get(name);
 
         if(message.startsWith(prefix) && currentCommand == null){
@@ -59,10 +61,6 @@ public class CommandHandler extends ListenerAdapter {
             return;
         }
 
-        if (!message.startsWith(prefix)) {
-            //Not a command
-            return;
-        }
 
         if(currentCommand.getArgs() != args.length){
             event.getChannel().sendMessage(BotReplies.incorrectUsage(currentCommand)).queue();

@@ -2,6 +2,7 @@ package Handlers;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.events.guild.GuildJoinEvent;
@@ -66,7 +67,10 @@ public class StatsHandler extends ListenerAdapter {
         totalMembers = 0;
         totalServers = 0;
         for(Guild g : guilds){
-            totalMembers += g.getMemberCount();
+            for(Member m : g.getMembers()){
+                if(!m.getUser().isBot())
+                    totalMembers++;
+            }
             totalServers++;
         }
     }
@@ -101,7 +105,7 @@ public class StatsHandler extends ListenerAdapter {
     public static EmbedBuilder statsMessage(){
         EmbedBuilder message = new EmbedBuilder();
 
-        message.setTitle("Stats \uD83D\uDCC8");
+        message.setTitle("Stats");
         message.setDescription(
                 "\n\uD83D\uDDD3 Published at: `01/01/2000`\n\n" +
                 "\uD83C\uDFAE Total server count `" + totalServers+ "`\n\n" +
