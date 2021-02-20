@@ -1,3 +1,4 @@
+import Database.SQLiteDataSource;
 import Handlers.CommandHandler;
 import Handlers.ReactionHandler;
 import Handlers.StatsHandler;
@@ -13,6 +14,9 @@ import java.io.*;
 public class main {
 
     public static void main(String[] args) throws LoginException, IOException {
+
+        SQLiteDataSource.findDatabase();
+
         JDABuilder
                 .createDefault(token())
                 .setChunkingFilter(ChunkingFilter.ALL)

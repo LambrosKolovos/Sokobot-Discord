@@ -1,5 +1,6 @@
 package Handlers;
 
+import Database.SQLiteDataSource;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Member;
@@ -26,6 +27,7 @@ public class StatsHandler extends ListenerAdapter {
     private String joinroomID;
     private String leaveroomID;
 
+
     @Override
     public void onReady(@Nonnull ReadyEvent event) {
         System.out.println("Bot ready!");
@@ -40,20 +42,22 @@ public class StatsHandler extends ListenerAdapter {
         guildList = event.getJDA().getGuildCache().asList();
         calculateAudience(guildList);
     }
-
     @Override
     public void onGuildJoin(@Nonnull GuildJoinEvent event) {
+        SQLiteDataSource.insertGuild(event.getGuild().getId());
+
         TextChannel join = (TextChannel) Objects.requireNonNull(event.getJDA().getGuildById(homeID)).getGuildChannelById(joinroomID);
         join.sendMessage(notification(
                 "✅ I joined **" + event.getGuild().getName() +
                         "** that has **" + event.getGuild().getMemberCount() + "** members!", true).build()).queue();
-
         guildList = event.getJDA().getGuildCache().asList();
         calculateAudience(guildList);
     }
 
     @Override
     public void onGuildLeave(@Nonnull GuildLeaveEvent event) {
+        SQLiteDataSource.removeGuild(event.getGuild().getId());
+
         TextChannel join = (TextChannel) Objects.requireNonNull(event.getJDA().getGuildById(homeID)).getGuildChannelById(joinroomID);
         join.sendMessage(notification(
                 "❌ I left **" + event.getGuild().getName() +
@@ -68,7 +72,6 @@ public class StatsHandler extends ListenerAdapter {
         totalServers = 0;
         for(Guild g : guilds){
             for(Member m : g.getMembers()){
-                if(!m.getUser().isBot())
                     totalMembers++;
             }
             totalServers++;

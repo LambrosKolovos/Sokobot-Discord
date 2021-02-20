@@ -1,6 +1,7 @@
 package Handlers;
 
 import bot.BotReplies;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.RichPresence;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -10,6 +11,7 @@ import Commands.*;
 import javax.annotation.Nonnull;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Objects;
 
 public class CommandHandler extends ListenerAdapter {
 
@@ -40,6 +42,7 @@ public class CommandHandler extends ListenerAdapter {
 
     @Override
     public void onGuildMessageReceived(@Nonnull GuildMessageReceivedEvent event) {
+
         if(!event.getAuthor().isBot()) {
             message = event.getMessage().getContentRaw().toLowerCase();
             if (message.startsWith(prefix)) {
