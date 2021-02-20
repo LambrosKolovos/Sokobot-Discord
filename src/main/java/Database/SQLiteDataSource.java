@@ -31,7 +31,7 @@ public class SQLiteDataSource {
 
     /* GUILD FUNCTIONS */
     public static void insertGuild(String guid){
-        String query = "INSERT INTO guilds(guildID, guildPref) VALUES(?, ?)";
+        String query = "INSERT INTO guilds(guildID, prefix) VALUES(?, ?)";
         try {
             PreparedStatement prepStmt = conn.prepareStatement(query);
 
@@ -45,7 +45,7 @@ public class SQLiteDataSource {
     }
 
     public static void updateGuildPrefix(String guid, String prefix){
-        String query = "UPDATE guilds SET prefix = ? WHERE guid = ?";
+        String query = "UPDATE guilds SET prefix = ? WHERE guildID = ? ";
 
         try{
             PreparedStatement prepStmt = conn.prepareStatement(query);
@@ -59,18 +59,18 @@ public class SQLiteDataSource {
         }
     }
 
-    public String getGuildPrefix(String guid){
+    public static String getGuildPrefix(String guid){
 
-        String query = "SELECT guildPref FROM guilds WHERE guid = ?";
+        String query = "SELECT prefix FROM guilds WHERE guildID = ? ";
         String prefix = "";
         try {
             PreparedStatement prepStmt = conn.prepareStatement(query);
             prepStmt.setString(1, guid);
 
-            ResultSet rs = prepStmt.executeQuery(query);
+            ResultSet rs = prepStmt.executeQuery();
 
-            if(rs.getFetchSize() == 1){
-                prefix = rs.getString("guildPref");
+            if(rs.getFetchSize() == 0){
+                prefix = rs.getString("prefix");
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());

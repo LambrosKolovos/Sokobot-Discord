@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 public class Play extends Command {
 
     public Play(){
-        super("play", 1, "$play id");
+        super("play", 1, "play id");
     }
 
     @Override

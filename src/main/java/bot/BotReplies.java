@@ -2,7 +2,6 @@ package bot;
 
 import Commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.User;
 
@@ -30,14 +29,21 @@ public class BotReplies {
         return  response("Reset","✅ Resetting level " + id + " ! ", false).build();
     }
 
-    public static MessageEmbed incorrectUsage(Command cmd){
-        return response("Error","❌ Incorrect usage!\n\n✅ Correct usage -> **" + cmd.getUsage()+"**", true).build() ;
+    public static MessageEmbed incorrectUsage(String prf, Command cmd){
+        return response("Error","❌ Incorrect usage!\n\n✅ Correct usage -> **" + prf + cmd.getUsage()+"**", true).build() ;
     }
 
     public static MessageEmbed notFound(){
         return response("Error","❌ No such command found!", true).build();
     }
 
+    public static MessageEmbed noPermission(){
+        return response("Error", "❌ You are not an admin to use this command!", true).build();
+    }
+
+    public static MessageEmbed prefixSet(String prefix){
+        return  response("Success", "✅ Prefix successfully set to ` " + prefix + " ` !", false).build();
+    }
     private static EmbedBuilder response(String title, String text, boolean isError){
         EmbedBuilder msg = new EmbedBuilder();
 

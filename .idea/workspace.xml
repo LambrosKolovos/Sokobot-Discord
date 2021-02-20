@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5112a0d3-bdbe-4b2f-8d32-d08304be2c2d" name="Default Changelist" comment="Bot replies update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/SQLiteDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Commands/Prefix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/Help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/Play.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/Stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/Stop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/Stop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/SQLiteDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/SQLiteDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/StatsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/StatsHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/BotReplies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/BotReplies.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -93,14 +96,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="java" value="31" />
+          <entry key="java" value="46" />
           <entry key="txt" value="3" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="31" />
+          <entry key="JAVA" value="46" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="1" />
         </counts>
@@ -108,15 +111,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="34" />
-          <entry key="java" value="2858" />
-          <entry key="txt" value="41" />
+          <entry key="java" value="4317" />
+          <entry key="txt" value="64" />
           <entry key="xml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2858" />
-          <entry key="PLAIN_TEXT" value="75" />
+          <entry key="JAVA" value="4317" />
+          <entry key="PLAIN_TEXT" value="98" />
           <entry key="XML" value="10" />
         </counts>
       </usages-collector>
@@ -125,38 +128,77 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bot/Level.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bot/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2597#2598#0" expanded="true" />
-                <element signature="e#2647#2648#0" expanded="true" />
-                <element signature="e#2685#2686#0" expanded="true" />
-                <element signature="e#2721#2722#0" expanded="true" />
-                <element signature="method#drawBoxTargets#0;class#Game#0" />
-                <element signature="method#isBoxPos#0;class#Game#0" />
-                <element signature="method#isOver#0;class#Game#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="236">
+              <caret line="72" column="77" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Prefix.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="49" lean-forward="true" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Command.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Play.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Help.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Stats.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Stop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Database/SQLiteDataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#removeGuild#0;class#SQLiteDataSource#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,8 +206,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/BotReplies.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="273">
+              <caret line="32" column="81" lean-forward="true" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -209,35 +266,36 @@
         <option value="$PROJECT_DIR$/src/config.json" />
         <option value="$PROJECT_DIR$/src/main/Token.txt" />
         <option value="$PROJECT_DIR$/src/main/java/bot/GameManagement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/Stop.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/BoardState.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Move.java" />
         <option value="$PROJECT_DIR$/src/states.txt" />
         <option value="$PROJECT_DIR$/src/main/java/Reactions/Exit.java" />
         <option value="$PROJECT_DIR$/src/main/java/Handlers/Stats.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/Stats.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/Help.java" />
         <option value="$PROJECT_DIR$/src/Token.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/Command.java" />
         <option value="$PROJECT_DIR$/src/main/java/Reactions/Reaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Handlers/ReactionHandler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/SQLiteDataSource.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/Handlers/StatsHandler.java" />
         <option value="$PROJECT_DIR$/src/levels.txt" />
         <option value="$PROJECT_DIR$/src/main/java/Reactions/Undo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Commands/Play.java" />
         <option value="$PROJECT_DIR$/src/main/java/Reactions/Reset.java" />
         <option value="$PROJECT_DIR$/src/main/java/Reactions/DownReact.java" />
         <option value="$PROJECT_DIR$/src/main/java/Reactions/RightReact.java" />
         <option value="$PROJECT_DIR$/src/main/java/Reactions/UpReact.java" />
         <option value="$PROJECT_DIR$/src/main/java/Reactions/LeftReact.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bot/BotReplies.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Level.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/SQLiteDataSource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/Prefix.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/Command.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bot/BotReplies.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/Play.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/Help.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/Stats.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Commands/Stop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java" />
       </list>
     </option>
   </component>
@@ -318,7 +376,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1613793457548" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1613840815581" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -415,14 +473,20 @@
       <option name="project" value="LOCAL" />
       <updated>1613834308050</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added database">
+      <created>1613834394988</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613834394988</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22163388" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22163388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -431,7 +495,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.2852459" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.33934426" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -498,7 +562,8 @@
     <MESSAGE value="Reaction movement" />
     <MESSAGE value="Stats command" />
     <MESSAGE value="Bot replies improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bot replies improvements" />
+    <MESSAGE value="Added database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added database" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/Commands/PlayCommand.java" />
@@ -516,13 +581,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/BoardState.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/Move.java" />
     <entry file="file://$PROJECT_DIR$/src/states.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Stop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="70" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/function/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -546,24 +604,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Token.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Stats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/net/dv8tion/JDA/4.2.0_228/JDA-4.2.0_228.jar!/net/dv8tion/jda/internal/utils/Checks.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -588,16 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Reactions/Reaction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -619,27 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="36" column="27" lean-forward="true" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Database/SQLiteDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="32" selection-start-line="32" selection-end-line="91" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#insertGuild#0;class#SQLiteDataSource#0" />
-            <element signature="method#updateGuildPrefix#0;class#SQLiteDataSource#0" />
-            <element signature="method#getGuildPrefix#0;class#SQLiteDataSource#0" />
-            <element signature="method#removeGuild#0;class#SQLiteDataSource#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Help.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -681,13 +694,6 @@
     <entry file="file://$PROJECT_DIR$/src/adventure.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Play.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="39" column="9" selection-start-line="15" selection-start-column="6" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/GameManagement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -707,8 +713,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+        <state relative-caret-position="186">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2597#2598#0" expanded="true" />
@@ -722,24 +728,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="240">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Database/SQLiteDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#removeGuild#0;class#SQLiteDataSource#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/BotReplies.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="273">
+          <caret line="32" column="81" lean-forward="true" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bot/Level.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Help.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+        <state relative-caret-position="119">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Play.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Stats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Stop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Commands/Prefix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="49" lean-forward="true" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/CommandHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="72" column="77" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="77" />
         </state>
       </provider>
     </entry>

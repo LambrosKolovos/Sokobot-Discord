@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 public class Stop extends Command{
 
     public Stop(){
-        super("stop", 0, "$stop");
+        super("stop", 0, "stop");
     }
 
     @Override
