@@ -22,7 +22,7 @@ public class Play extends Command {
             Game game = new Game(user,args[0]);
             GameManagement.addGame(user.getIdLong(), game);
             Game currentGame = GameManagement.getGame(user.getIdLong());
-            event.getChannel().sendMessage(currentGame.gameMessage(user).build()).queue(
+            event.getChannel().sendMessage(currentGame.gameMessage(user, false).build()).queue(
                     msg -> {
                         game.setGameMessageID(msg.getIdLong());
                         msg.addReaction("U+2b05").queue();
@@ -32,6 +32,11 @@ public class Play extends Command {
                         msg.addReaction("U+21A9").queue();
                         msg.addReaction("U+1f504").queue();
                     });
+            event.getChannel().sendMessage("_ _").queue(
+                    msg ->{
+                        game.setPlaceHolderID(msg.getIdLong());
+                    }
+            );
         }
     }
 }

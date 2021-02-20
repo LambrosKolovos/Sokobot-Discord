@@ -14,6 +14,6 @@ public class Undo extends Reaction{
     @Override
     public void execute(GenericGuildMessageReactionEvent event, Game currentGame, User user) {
         currentGame.undoMove();
-        event.getChannel().editMessageById(currentGame.getGameMessageID(), currentGame.gameMessage(user).build()).queue();
+        event.getChannel().editMessageById(currentGame.getGameMessageID(), currentGame.gameMessage(user, false).build()).queue();
     }
 }

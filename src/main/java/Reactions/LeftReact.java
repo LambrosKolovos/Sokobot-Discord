@@ -15,10 +15,11 @@ public class LeftReact extends Reaction {
     @Override
     public void execute(GenericGuildMessageReactionEvent event, Game currentGame, User user) {
         currentGame.move("a");
-        event.getChannel().editMessageById(currentGame.getGameMessageID(), GameManagement.getGame(user.getIdLong()).gameMessage(user).build()).queue();
+        event.getChannel().editMessageById(currentGame.getGameMessageID(), GameManagement.getGame(user.getIdLong()).gameMessage(user, false).build()).queue();
+        event.getChannel().editMessageById(currentGame.getPlaceHolderID(), "_ _").queue();
 
         if(GameManagement.getGame(user.getIdLong()).isOver()){
-            event.getChannel().sendMessage(BotReplies.levelComplete(GameManagement.getGame(user.getIdLong()))).queue();
+            event.getChannel().editMessageById(currentGame.getPlaceHolderID(), BotReplies.levelComplete(currentGame, user)).queue();
             GameManagement.removeGame(user.getIdLong());
         }
     }

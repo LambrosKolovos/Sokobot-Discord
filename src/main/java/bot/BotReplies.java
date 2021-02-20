@@ -2,15 +2,17 @@ package bot;
 
 import Commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageEmbed;
+import net.dv8tion.jda.api.entities.User;
 
 import java.awt.*;
 
 public class BotReplies {
 
-    public static MessageEmbed levelComplete(Game g){
-        return response("Congratulations \uD83C\uDF89","\n⭐ Level " + g.getLvID() + " complete in " + g.getMoves()+
-                " moves! ⭐", false).build();
+    public static MessageEmbed levelComplete(Game g, User user){
+        return response("Congratulations! \uD83C\uDF89","\n⭐ " + user.getAsMention() + " completed **Level " + g.getLvID() + "** in **" + g.getMoves()+
+                "** moves! ⭐", false).build();
     }
 
     public static MessageEmbed activeGameWarn(){
@@ -44,4 +46,5 @@ public class BotReplies {
         msg.setDescription(text);
         return msg;
     }
+
 }

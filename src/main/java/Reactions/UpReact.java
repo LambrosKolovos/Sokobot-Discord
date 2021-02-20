@@ -15,10 +15,11 @@ public class UpReact extends Reaction{
     @Override
     public void execute(GenericGuildMessageReactionEvent event, Game currentGame, User user) {
         currentGame.move("w");
-        event.getChannel().editMessageById(currentGame.getGameMessageID(), currentGame.gameMessage(user).build()).queue();
+        event.getChannel().editMessageById(currentGame.getGameMessageID(), GameManagement.getGame(user.getIdLong()).gameMessage(user, false).build()).queue();
+        event.getChannel().editMessageById(currentGame.getPlaceHolderID(), "_ _").queue();
 
         if(GameManagement.getGame(user.getIdLong()).isOver()){
-            event.getChannel().sendMessage(BotReplies.levelComplete(currentGame)).queue();
+            event.getChannel().editMessageById(currentGame.getPlaceHolderID(), BotReplies.levelComplete(currentGame, user)).queue();
             GameManagement.removeGame(user.getIdLong());
         }
     }

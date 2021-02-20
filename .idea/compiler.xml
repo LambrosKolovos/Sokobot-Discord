@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SokobanDiscord" />
+        <module name="Sokobot-Discord-JarTest" />
       </profile>
     </annotationProcessing>
   </component>

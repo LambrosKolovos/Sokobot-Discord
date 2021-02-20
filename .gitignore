@@ -24,3 +24,7 @@ hs_err_pid*
 
 #Hide token file
 *.txt
+
+#Hide database file
+*.db
+

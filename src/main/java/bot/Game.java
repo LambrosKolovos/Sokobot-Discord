@@ -1,6 +1,7 @@
 package bot;
 
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.User;
 
 import java.awt.*;
@@ -14,15 +15,19 @@ public class Game {
     private boolean stateChanged;
 
     private int[][] boxPositions;
-    private String boardMessage;
     private int boxes;
     private int boxOnTarget;
+
     private int playerX;
     private int playerY;
     private int moves;
+
     private String lvID;
     private Level lv;
+
     private Long gameMessageID;
+    private Long placeHolderID;
+    private String boardMessage;
 
     public Game(User player, String id){
         lv = new Level(Integer.parseInt(id));
@@ -68,6 +73,7 @@ public class Game {
         }
 
     }
+
     private void addStateToHistory(){
         String state = "";
         for(int i=0; i<boardState.length; i++) {
@@ -84,6 +90,13 @@ public class Game {
         this.gameMessageID = gameMessageID;
     }
 
+    public void setPlaceHolderID(Long placeHolderID) {
+        this.placeHolderID = placeHolderID;
+    }
+
+    public Long getPlaceHolderID() {
+        return placeHolderID;
+    }
     public Long getGameMessageID() {
         return gameMessageID;
     }
@@ -357,15 +370,19 @@ public class Game {
         return boxOnTarget == boxes;
     }
 
-    public EmbedBuilder gameMessage(User user){
+    public EmbedBuilder gameMessage(User user, boolean reset){
         EmbedBuilder message = new EmbedBuilder();
 
         message.setTitle("Sokoban | Level " + lvID);
         message.setDescription(boardMessage);
         message.setColor(new Color(253,203,88));
-        message.addField("Moves - " + moves," ",false);
+        message.addField("Moves - " + moves,reset? "Resetting" : " ",false);
         message.addField("Player", user.getAsMention(), true);
         return message;
+    }
+
+    public MessageEmbed resetPlaceholder(){
+        return BotReplies.resetLevelMessage(lvID);
     }
 
 }
