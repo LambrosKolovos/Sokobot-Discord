@@ -1,5 +1,6 @@
 import Database.SQLiteDataSource;
 import Handlers.CommandHandler;
+import Handlers.MoveReactionHandler;
 import Handlers.ReactionHandler;
 import Handlers.StatsHandler;
 import net.dv8tion.jda.api.JDABuilder;
@@ -25,6 +26,7 @@ public class main {
                 .setActivity(Activity.playing("$play to start"))
                 .addEventListeners(new CommandHandler())
                 .addEventListeners(new ReactionHandler())
+                .addEventListeners(new MoveReactionHandler())
                 .addEventListeners(new StatsHandler())
                 .build();
     }
